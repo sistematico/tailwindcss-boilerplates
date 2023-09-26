@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+
+<!--
+ // WEBSITE: https://zeon.studio/
+ // TWITTER: https://twitter.com/zeon_studio/
+ // FACEBOOK: https://facebook.com/heyzeonstudio/
+ // GITHUB: https://github.com/zeon-studio/
+-->
+
+<html lang="zxx">
+<head>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="images/favicon.png" />
+  <!-- theme meta -->
+  <meta name="theme-name" content="themeplate" />
+  <meta name="msapplication-TileColor" content="#000000" />
+  <meta
+    name="theme-color"
+    media="(prefers-color-scheme: light)"
+    content="#fff"
+  />
+  <meta
+    name="theme-color"
+    media="(prefers-color-scheme: dark)"
+    content="#000"
+  />
+  <meta name="generator" content="gulp" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+  <!-- responsive meta -->
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=5"
+  />
+
+  <!-- title -->
+  <title>Themeplate</title>
+
+  <!-- noindex robots -->
+  <meta name="robots" content="" />
+
+  <!-- meta-description -->
+  <meta name="description" content="meta description" />
+
+  <!-- author from config.json -->
+  <meta name="author" content="zeon.studio" />
+
+  <!-- og-title -->
+  <meta property="og:title" content="themeplate" />
+
+  <!-- og-description -->
+  <meta property="og:description" content="gulp tailwind boilerplate" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://themeplate.netlify.app" />
+
+  <!-- twitter-title -->
+  <meta name="twitter:title" content="themeplate" />
+
+  <!-- twitter-description -->
+  <meta name="twitter:description" content="gulp tailwind boilerplate" />
+
+  <!-- og-image -->
+  <meta property="og:image" content="" />
+
+  <!-- twitter-image -->
+  <meta name="twitter:image" content="" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- google font css -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Signika:wght@500;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- styles -->
+  <!-- Swiper slider -->
+  <link rel="stylesheet" href="plugins/swiper/swiper-bundle.css" />
+
+  <!-- Fontawesome -->
+  <link rel="stylesheet" href="plugins/font-awesome/v6/brands.css" />
+  <link rel="stylesheet" href="plugins/font-awesome/v6/solid.css" />
+  <link rel="stylesheet" href="plugins/font-awesome/v6/regular.css" />
+  <link rel="stylesheet" href="plugins/font-awesome/v6/fontawesome.css" />
+
+  <!-- Main Stylesheet -->
+  <link href="styles/main.css" rel="stylesheet" />
+</head>
+
+<header class="header sticky top-0 z-30">
+  <nav class="navbar container">
+    <!-- logo -->
+    <div class="order-0">
+      <a class="navbar-brand block" href="index.html">
+        <img
+          src="images/logo.png"
+          class="dark:hidden"
+          width="180"
+          height="21"
+          alt="themeplate"
+        />
+        <img
+          src="images/logo-darkmode.png"
+          class="hidden dark:inline-block"
+          width="180"
+          height="21"
+          alt="themeplate"
+        />
+      </a>
+    </div>
+    <!-- navbar toggler -->
+    <input id="nav-toggle" type="checkbox" class="hidden" />
+    <label
+      for="nav-toggle"
+      class="order-3 cursor-pointer flex items-center lg:hidden text-dark dark:text-white lg:order-1"
+    >
+      <svg id="show-button" class="h-6 fill-current block" viewBox="0 0 20 20">
+        <title>Menu Open</title>
+        <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path>
+      </svg>
+      <svg id="hide-button" class="h-6 fill-current hidden" viewBox="0 0 20 20">
+        <title>Menu Close</title>
+        <polygon
+          points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
+          transform="rotate(45 10 10)"
+        ></polygon>
+      </svg>
+    </label>
+    <!-- /navbar toggler -->
+    <ul
+      id="nav-menu"
+      class="navbar-nav order-3 hidden w-full pb-6 lg:order-1 lg:flex lg:w-auto lg:space-x-2 lg:pb-0 xl:space-x-8"
+    >
+      <li class="nav-item">
+        <a href="index.html" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="about.html" class="nav-link">About</a>
+      </li>
+      <li class="nav-item">
+        <a href="elements.html" class="nav-link">Elements</a>
+      </li>
+      <li class="nav-item nav-dropdown group relative">
+        <span class="nav-link inline-flex items-center">
+          Pages
+          <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
+            <path
+              d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+            />
+          </svg>
+        </span>
+        <ul
+          class="nav-dropdown-list hidden group-hover:block lg:invisible lg:absolute lg:block lg:opacity-0 lg:group-hover:visible lg:group-hover:opacity-100"
+        >
+          <li class="nav-dropdown-item">
+            <a href="contact.html" class="nav-dropdown-link">Contact</a>
+          </li>
+          <li class="nav-dropdown-item">
+            <a href="blog.html" class="nav-dropdown-link">Blog</a>
+          </li>
+          <li class="nav-dropdown-item">
+            <a href="blog-single.html" class="nav-dropdown-link">Blog Single</a>
+          </li>
+          <li class="nav-dropdown-item">
+            <a href="authors.html" class="nav-dropdown-link">Authors</a>
+          </li>
+          <li class="nav-dropdown-item">
+            <a href="author-single.html" class="nav-dropdown-link">
+              Author Single
+            </a>
+          </li>
+          <li class="nav-dropdown-item">
+            <a href="search.html" class="nav-dropdown-link">Search</a>
+          </li>
+          <li class="nav-dropdown-item">
+            <a href="no-search-found.html" class="nav-dropdown-link">
+              No Search Found
+            </a>
+          </li>
+          <li class="nav-dropdown-item">
+            <a href="404.html" class="nav-dropdown-link"> 404 Page </a>
+          </li>
+        </ul>
+      </li>
+      <li class="mt-4 inline-block lg:hidden">
+        <a class="btn btn-outline-primary btn-sm" href="contact.html">
+          Get In Touch
+        </a>
+      </li>
+    </ul>
+    <div class="order-1 ml-auto flex items-center md:order-2 lg:ml-0">
+      <a
+        class="mr-5 inline-block border-r border-border pr-5 text-xl text-dark hover:text-primary dark:border-darkmode-border dark:text-white"
+        href="search.html"
+        aria-label="search"
+      >
+        <i class="fa-solid fa-search"></i>
+      </a>
+      <div class="theme-switcher mr-5">
+        <input id="theme-switcher" data-theme-switcher type="checkbox" />
+        <label for="theme-switcher">
+          <span class="sr-only">theme switcher</span>
+          <span>
+            <!-- sun -->
+            <svg
+              class="absolute left-[4px] top-[4px] z-10 opacity-100 dark:opacity-0"
+              viewBox="0 0 56 56"
+              fill="#fff"
+              height="16"
+              width="16"
+            >
+              <path
+                d="M30 4.6c0-1-.9-2-2-2a2 2 0 0 0-2 2v5c0 1 .9 2 2 2s2-1 2-2Zm9.6 9a2 2 0 0 0 0 2.8c.8.8 2 .8 2.9 0L46 13a2 2 0 0 0 0-2.9 2 2 0 0 0-3 0Zm-26 2.8c.7.8 2 .8 2.8 0 .8-.7.8-2 0-2.9L13 10c-.7-.7-2-.8-2.9 0-.7.8-.7 2.1 0 3ZM28 16a12 12 0 0 0-12 12 12 12 0 0 0 12 12 12 12 0 0 0 12-12 12 12 0 0 0-12-12Zm23.3 14c1.1 0 2-.9 2-2s-.9-2-2-2h-4.9a2 2 0 0 0-2 2c0 1.1 1 2 2 2ZM4.7 26a2 2 0 0 0-2 2c0 1.1.9 2 2 2h4.9c1 0 2-.9 2-2s-1-2-2-2Zm37.8 13.6a2 2 0 0 0-3 0 2 2 0 0 0 0 2.9l3.6 3.5a2 2 0 0 0 2.9 0c.8-.8.8-2.1 0-3ZM10 43.1a2 2 0 0 0 0 2.9c.8.7 2.1.8 3 0l3.4-3.5c.8-.8.8-2.1 0-2.9-.8-.8-2-.8-2.9 0Zm20 3.4c0-1.1-.9-2-2-2a2 2 0 0 0-2 2v4.9c0 1 .9 2 2 2s2-1 2-2Z"
+              />
+            </svg>
+            <!-- moon -->
+            <svg
+              class="absolute left-[4px] top-[4px] z-10 opacity-0 dark:opacity-100"
+              viewBox="0 0 24 24"
+              fill="none"
+              height="16"
+              width="16"
+            >
+              <path
+                fill="#000"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M8.2 2.2c1-.4 2 .6 1.6 1.5-1 3-.4 6.4 1.8 8.7a8.4 8.4 0 0 0 8.7 1.8c1-.3 2 .5 1.5 1.5v.1a10.3 10.3 0 0 1-9.4 6.2A10.3 10.3 0 0 1 3.2 6.7c1-2 2.9-3.5 4.9-4.4Z"
+              />
+            </svg>
+          </span>
+        </label>
+      </div>
+      <a
+        class="btn btn-outline-primary btn-sm hidden lg:inline-block"
+        href="contact.html"
+      >
+        Get In Touch
+      </a>
+    </div>
+  </nav>
+</header>
+
+<body><section>
+  <div class="container text-center">
+    <div
+      class="rounded-2xl bg-gradient-to-b from-body to-theme-light px-8 py-14 dark:from-darkmode-body dark:to-darkmode-theme-light"
+    >
+      <h1>Elements</h1>
+      <ul class="breadcrumb mt-6 inline-flex">
+        <li class="mx-1 capitalize">
+          <a class="text-primary dark:text-darkmode-primary" href="#">Home</a>
+        </li>
+        <li class="mx-1 capitalize text-light dark:text-darkmode-light">
+          <span class="inlin-block mr-1">/</span>
+          Elements
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row justify-center">
+      <div class="lg:col-10">
+        <div class="content">
+          <!-- typography -->
+          <h2>Typography:</h2>
+          <h1>H1 - Heading Example</h1>
+          <h2>H2 - Heading Example</h2>
+          <h3>H3 - Heading Example</h3>
+          <h4>H4 - Heading Example</h4>
+          <h5>H5 - Heading Example</h5>
+          <h6>H6 - Heading Example</h6>
+
+          <hr />
+
+          <!-- Paragraphs -->
+          <h2>Paragraph:</h2>
+          <p>
+            I apologize, but I'm having difficulty understanding your question
+            or prompt. It seems like you're talking about a product called
+            "Astroplate" and its features for team collaboration, but I'm not
+            sure what you're looking for. Could you please r ephrase your
+            questionor provide more context so I can better understand and
+            assist you?
+          </p>
+          <p>
+            I apologize, but I'm having difficulty understanding your question
+            or prompt. It seems like you're talking about a product oplate" and
+            its features for team collaboration, but I'm not sure what you're
+            looking for. Could you please rephrase or provide more context so I
+            can better understand and assist you?
+          </p>
+
+          <hr />
+
+          <!-- Emphasis -->
+          <h2>Emphasis:</h2>
+          <ol>
+            <li><strong>Automate SaaS</strong> procurement</li>
+            <li>
+              <strong>Consolidate apps with overlapping</strong> functions
+            </li>
+            <li>
+              <strong>On-boarding: Give access</strong> to all apps in one go
+            </li>
+            <li><strong>Never forget an</strong> upcoming renewal</li>
+          </ol>
+
+          <hr />
+
+          <!-- links -->
+          <h2>Links:</h2>
+          <p>
+            <a href="https://www.google.com">I&#39;m an inline-style link</a>
+          </p>
+          <p>
+            <a href="https://www.google.com" title="Google&#39;s Homepage"
+              >I&#39;m an inline-style link with title</a
+            >
+          </p>
+          <p>
+            <a href="https://www.themefisher.com"
+              >I&#39;m a reference-style link</a
+            >
+          </p>
+          <p>
+            <a href="../blob/master/LICENSE"
+              >I&#39;m a relative reference to a repository file</a
+            >
+          </p>
+          <p>
+            <a href="https://gethugothemes.com"
+              >You can use numbers for reference-style link definitions</a
+            >
+          </p>
+          <p>
+            Or leave it empty and use the
+            <a href="https://www.getjekyllthemes.com">link text itself</a>.
+          </p>
+          <p>example.com (but not on Github, for example).</p>
+          <p>Some text to show that the reference links can follow later.</p>
+
+          <hr />
+
+          <!-- unordered list -->
+          <h2>Unordered list:</h2>
+          <ul>
+            <li>appeared for an instant to be in two places at once.</li>
+            <li>We have a saboteur aboard.</li>
+            <li>We have a saboteur aboard.</li>
+          </ul>
+
+          <hr />
+          <!-- ordered list -->
+          <h2>Ordered list:</h2>
+          <ol>
+            <li>Automate SaaS procurement</li>
+            <li>We have a saboteur aboard.</li>
+            <li>We have a saboteur aboard.</li>
+          </ol>
+
+          <hr />
+
+          <!-- code block -->
+          <h2>Code Block:</h2>
+          <pre>
+<code class="javascript">
+  window.addEventListener("load", (e) => {
+    document.querySelector(".preloader").style.display = "none";
+  })
+</code>
+          </pre>
+
+          <hr />
+
+          <!-- Buttons -->
+          <h2>Buttons:</h2>
+          <button class="btn btn-primary">Primary Button</button>
+          <button class="btn btn-outline-primary">
+            Primary Outline Button
+          </button>
+
+          <hr />
+
+          <!-- Quotes -->
+          <h2>Quotes:</h2>
+          <blockquote>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae,
+            dicta quasi adipisci veniam corrupti quod.
+          </blockquote>
+
+          <hr />
+
+          <!-- Notice -->
+          <h2>Notice:</h2>
+          <div class="notice note">
+            <div class="notice-head">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10 9V14M10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10C19 14.9706 14.9706 19 10 19ZM10.0498 6V6.1L9.9502 6.1002V6H10.0498Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <p class="my-0 ml-1.5">Note</p>
+            </div>
+            <div class="notice-body">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+                dolorum accusamus consequatur commodi ex modi fuga illo earum
+                exercitationem minima.
+              </p>
+            </div>
+          </div>
+          <div class="notice tip">
+            <div class="notice-head">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12 0C18.6274 0 24 5.37258 24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37258 5.37258 0 12 0ZM12 2.4C6.69807 2.4 2.4 6.69807 2.4 12C2.4 17.3019 6.69807 21.6 12 21.6C17.3019 21.6 21.6 17.3019 21.6 12C21.6 6.69807 17.3019 2.4 12 2.4ZM15.9515 7.55147L9.6 13.9029L8.04853 12.3515C7.5799 11.8828 6.8201 11.8828 6.35147 12.3515C5.88284 12.8201 5.88284 13.5799 6.35147 14.0485L8.75147 16.4485C9.2201 16.9172 9.9799 16.9172 10.4485 16.4485L17.6485 9.24853C18.1172 8.7799 18.1172 8.0201 17.6485 7.55147C17.1799 7.08284 16.4201 7.08284 15.9515 7.55147Z"
+                  fill="currentColor"
+                />
+              </svg>
+              <p class="my-0 ml-1.5">Tip</p>
+            </div>
+            <div class="notice-body">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Adipisci mollitia odit necessitatibus tenetur nemo similique
+                impedit maxime incidunt. Dolore, tempore.
+              </p>
+            </div>
+          </div>
+          <div class="notice info">
+            <div class="notice-head">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 18 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.16109 0.993016C9.97971 1.03952 10.6611 1.42989 11.0721 2.22339L17.7981 15.8014C18.4502 17.1739 17.4403 19.0208 15.7832 19.0474H2.23859C0.730337 19.0234 -0.507163 17.3108 0.231587 15.7864L7.08321 2.20877C7.21146 1.96502 7.26996 1.89452 7.38059 1.76664C7.82534 1.25102 8.31171 0.975016 9.16109 0.993016ZM9.05046 2.49189C8.79284 2.50464 8.55696 2.64902 8.42834 2.87327C6.06134 7.36539 3.77946 11.9036 1.56546 16.4734C1.36071 16.9328 1.71209 17.5223 2.22621 17.547C6.74871 17.6201 11.2731 17.6201 15.7956 17.547C16.2925 17.523 16.666 16.953 16.459 16.4783C14.2866 11.9093 12.0471 7.37102 9.72171 2.87814C9.58446 2.63402 9.38309 2.48739 9.05046 2.49189Z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M9.61323 13.2153H8.35773L8.21973 7.04688H9.75723L9.61323 13.2153ZM8.17773 15.1015C8.17773 14.8731 8.25161 14.6841 8.39973 14.5338C8.54823 14.3838 8.75036 14.3084 9.00648 14.3084C9.26298 14.3084 9.46511 14.3838 9.61323 14.5338C9.76136 14.6841 9.83561 14.8731 9.83561 15.1015C9.83561 15.3216 9.76323 15.5057 9.61923 15.6539C9.47486 15.802 9.27086 15.8762 9.00648 15.8762C8.74211 15.8762 8.53811 15.802 8.39373 15.6539C8.24973 15.5057 8.17773 15.3216 8.17773 15.1015Z"
+                  fill="currentColor"
+                />
+              </svg>
+              <p class="my-0 ml-1.5">Info</p>
+            </div>
+            <div class="notice-body">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Adipisci mollitia odit necessitatibus tenetur nemo similique
+                impedit maxime incidunt. Dolore, tempore.
+              </p>
+            </div>
+          </div>
+          <div class="notice warning">
+            <div class="notice-head">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M10 0C15.522 0 20 4.478 20 10C20 15.522 15.522 20 10 20C4.478 20 0 15.522 0 10C0 4.478 4.478 0 10 0ZM10 2C5.589 2 2 5.589 2 10C2 14.411 5.589 18 10 18C14.411 18 18 14.411 18 10C18 5.589 14.411 2 10 2ZM12.293 6.293L13.707 7.707L11.414 10L13.707 12.293L12.293 13.707L10 11.414L7.707 13.707L6.293 12.293L8.586 10L6.293 7.707L7.707 6.293L10 8.586L12.293 6.293Z"
+                  fill="currentColor"
+                />
+              </svg>
+              <p class="my-0 ml-1.5">Warning</p>
+            </div>
+            <div class="notice-body">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Adipisci mollitia odit necessitatibus tenetur nemo similique
+                impedit maxime incidunt. Dolore, tempore.
+              </p>
+            </div>
+          </div>
+
+          <hr />
+
+          <!-- Table -->
+          <h2>Table:</h2>
+          <table>
+            <thead>
+              <tr>
+                <th align="left">#</th>
+                <th align="center">First</th>
+                <th align="center">Last</th>
+                <th align="right">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td align="left">1</td>
+                <td align="center">Row:1 Cell:1</td>
+                <td align="center">Row:1 Cell:2</td>
+                <td align="right">Row:1 Cell:3</td>
+              </tr>
+              <tr>
+                <td align="left">2</td>
+                <td align="center">Row:2 Cell:1</td>
+                <td align="center">Row:2 Cell:2</td>
+                <td align="right">Row:2 Cell:3</td>
+              </tr>
+              <tr>
+                <td align="left">3</td>
+                <td align="center">Row:3 Cell:1</td>
+                <td align="center">Row:3 Cell:2</td>
+                <td align="right">Row:3 Cell:3</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <hr />
+
+          <!-- Tab -->
+          <h2>Tab:</h2>
+          <div class="tab" data-tab-group="tab-group-name">
+  <ul class="tab-nav" data-tab-nav>
+    <li class="tab-nav-item active" tabindex="0" data-tab="0">Tab 1</li>
+    <li class="tab-nav-item" tabindex="-1" data-tab="1">Tab 2</li>
+    <li class="tab-nav-item" tabindex="-1" data-tab="2">Tab 3</li>
+  </ul>
+  <div class="tab-content" data-tab-content>
+    <div class="tab-content-panel active" data-tab-panel="0">
+      <h5 class="mt-0">This is Tab 1</h5>
+      <p>
+        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+        Stet clita kasd gubergren, no sea takimatsanctus est Lorem ipsum dolor
+        sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+        diam nonumy eirmod tempor rebum. Stet clita kasd gubergren, no sea
+        takimata sanctus est Lorem ipsum dolor sit amet.
+      </p>
+    </div>
+    <div class="tab-content-panel" data-tab-panel="1">
+      <h5 class="mt-0">This is Tab 2</h5>
+      <p>
+        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+        Stet clita kasd gubergren, no sea takimatsanctus est Lorem ipsum dolor
+        sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+        diam nonumy eirmod tempor
+      </p>
+    </div>
+    <div class="tab-content-panel" data-tab-panel="2">
+      <h5 class="mt-0">This is Tab 3</h5>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+        doloribus aspernatur maiores quaerat iste maxime vitae aperiam est
+        itaque labore facere tempora iusto, enim, omnis corporis nihil ratione
+        saepe soluta!
+      </p>
+    </div>
+  </div>
+</div>
+
+
+          <hr />
+
+          <!-- Accordion -->
+          <h2>Accordion:</h2>
+          <div class="accordion">
+  <button class="accordion-header" data-accordion>
+    Accordion Header
+    <svg
+      class="accordion-icon"
+      x="0px"
+      y="0px"
+      viewBox="0 0 512 512"
+      xmlspace="preserve"
+    >
+      <path
+        fill="currentColor"
+        d="M505.755,123.592c-8.341-8.341-21.824-8.341-30.165,0L256.005,343.176L36.421,123.592c-8.341-8.341-21.824-8.341-30.165,0 s-8.341,21.824,0,30.165l234.667,234.667c4.16,4.16,9.621,6.251,15.083,6.251c5.462,0,10.923-2.091,15.083-6.251l234.667-234.667 C514.096,145.416,514.096,131.933,505.755,123.592z"
+      ></path>
+    </svg>
+  </button>
+  <div class="accordion-content">
+    <ul>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+      <li>appeared for an instant to be in two places at once.</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+      <li>appeared for an instant to be in two places at once.</li>
+    </ul>
+  </div>
+</div>
+
+          <div class="accordion">
+  <button class="accordion-header" data-accordion>
+    Accordion Header
+    <svg
+      class="accordion-icon"
+      x="0px"
+      y="0px"
+      viewBox="0 0 512 512"
+      xmlspace="preserve"
+    >
+      <path
+        fill="currentColor"
+        d="M505.755,123.592c-8.341-8.341-21.824-8.341-30.165,0L256.005,343.176L36.421,123.592c-8.341-8.341-21.824-8.341-30.165,0 s-8.341,21.824,0,30.165l234.667,234.667c4.16,4.16,9.621,6.251,15.083,6.251c5.462,0,10.923-2.091,15.083-6.251l234.667-234.667 C514.096,145.416,514.096,131.933,505.755,123.592z"
+      ></path>
+    </svg>
+  </button>
+  <div class="accordion-content">
+    <ul>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+      <li>appeared for an instant to be in two places at once.</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+      <li>appeared for an instant to be in two places at once.</li>
+    </ul>
+  </div>
+</div>
+
+
+          <hr />
+
+          <!-- Modal -->
+          <h2>Modal:</h2>
+          <button class="btn btn-primary" data-modal-open>Click To Open A Modal</button>
+
+<div class="modal" data-modal>
+  <div class="modal-overlay" data-modal-close data-modal-overlay></div>
+  <div class="modal-content w-[1000px]">
+    <h2>Hey There!</h2>
+    <p>Have a good day.</p>
+    <button class="modal-close" data-modal-close>&times;</button>
+  </div>
+</div>
+
+
+          <hr />
+
+          <!-- Image -->
+          <h2>Image:</h2>
+          <img src="images/image-placeholder.png" alt="image" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="bg-theme-light dark:bg-darkmode-theme-light">
+  <div class="container">
+    <div class="row items-center py-10">
+      <div class="mb-8 text-center lg:col-3 lg:mb-0 lg:text-left">
+        <a class="inline-block" href="index.html">
+          <img
+            src="images/logo.png"
+            class="dark:hidden"
+            width="154"
+            height="28"
+            alt="themeplate"
+          />
+          <img
+            src="images/logo-darkmode.png"
+            class="hidden dark:inline-block"
+            width="154"
+            height="28"
+            alt="themeplate"
+          />
+        </a>
+      </div>
+      <div class="mb-8 text-center lg:col-6 lg:mb-0">
+        <ul>
+          <li class="m-3 inline-block">
+            <a href="about.html">About</a>
+          </li>
+          <li class="m-3 inline-block">
+            <a href="elements.html">Elements</a>
+          </li>
+          <li class="m-3 inline-block">
+            <a href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div class="mb-8 text-center lg:col-3 lg:mb-0 lg:mt-0 lg:text-right">
+        <ul class="social-icons">
+          <li>
+            <a href="#">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="border-t border-border py-7 dark:border-darkmode-border">
+    <div class="container text-center text-light dark:text-darkmode-light">
+      <p>
+        Designed & Developed by
+        <a target="_blank" href="https://zeon.studio">Zeon Studio</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- jQuery -->
+<!-- <script src="plugins/jquery/jquery.min.js"></script> -->
+<!-- Swiper JS -->
+<script src="plugins/swiper/swiper-bundle.js"></script>
+<!-- Main Script -->
+<script src="scripts/main.js"></script>
+
+</body>
+</html>
