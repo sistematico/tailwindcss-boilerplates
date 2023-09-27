@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "build": "bunx tailwindcss build -i src/tailwind.css -o assets/css/tailwind.css",
+    "dev": "bunx tailwindcss build -i src/tailwind.css -o assets/css/tailwind.css --watch"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}
