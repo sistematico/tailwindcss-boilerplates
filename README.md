@@ -1,7 +1,7 @@
 # Tailwind CSS Boilerplates & Exemplos
 
 <div style="text-align:center">
-  <img src="https://raw.githubusercontent.com/sistematico/tailwindcss-boilerplates/main/assets/images/tailwindcss_logo.svg" alt="Tailwind CSS" height="300" />
+  <img src="https://raw.githubusercontent.com/sistematico/tailwindcss-boilerplates/main/assets/images/logo.svg" alt="Tailwind CSS" height="300" />
 </div>
 
 [![CI](https://github.com/sistematico/tailwindcss-boilerplates/actions/workflows/ci.yml/badge.svg)](https://github.com/sistematico/tailwindcss-boilerplates/actions/workflows/ci.yml)

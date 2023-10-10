@@ -1,0 +1,21 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "bun",
+			"script": "x tailwindcss build -i src/tailwind.css -o assets/css/tailwind.css --watch",
+			"problemMatcher": [],
+			"label": "bun: dev",
+			"detail": "bunx tailwindcss build -i src/tailwind.css -o assets/css/tailwind.css --watch - package.json",
+			"runOptions": {
+				"runOn": "folderOpen"
+			},
+			"presentation": {
+				"reveal": "never",
+				"panel": "shared",
+				"showReuseMessage": false,
+				"clear": false
+			}
+		}
+	]
+}
